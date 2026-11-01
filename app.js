@@ -1,4 +1,4 @@
-// AWS communities in the Buenos Aires Metropolitan Area.
+// AWS communities in the Metropolitan Region of Buenos Aires.
 const nodesData = {
   type: 'FeatureCollection',
   features: [
