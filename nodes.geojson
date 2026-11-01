@@ -1,0 +1,83 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "name": "UdelaCiudad (UniCABA)",
+        "category": "sbg",
+        "typeLabel": "Student Builder Group",
+        "address": "Juan Domingo Perón 802, C1002ABC Buenos Aires City",
+        "description": "The founding official AWS Student Builders chapter at UniCABA.",
+        "link": "https://www.meetup.com/es-es/aws-sbg-at-university-of-the-city-of-buenos-aires/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-58.37772, -34.606] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "name": "FIUBA (UBA School of Engineering)",
+        "category": "sbg",
+        "typeLabel": "Student Builder Group",
+        "address": "Paseo Colón Avenue 850, C1063ACV Buenos Aires City",
+        "description": "A student cloud computing community at the UBA School of Engineering.",
+        "link": "https://www.meetup.com/aws-sbg-at-university-of-buenos-aires-faculty-of-engineering/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-58.3687539886, -34.6177777611] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "name": "UNDAV (Piñeyro Campus)",
+        "category": "sbg",
+        "typeLabel": "Student Builder Group",
+        "address": "Mario Bravo 1460, B1868BMA Piñeyro, Avellaneda",
+        "description": "A regional cloud student community in the southern suburbs of Buenos Aires.",
+        "link": "https://www.meetup.com/aws-sbg-at-national-university-of-avellaneda/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-58.39812, -34.66853] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "name": "Universidad Austral (Campus Pilar)",
+        "category": "sbg",
+        "typeLabel": "Student Builder Group",
+        "address": "Mariano Acosta 1611, B1630FHB Pilar",
+        "description": "A student cloud architecture community in the northern suburbs.",
+        "link": "https://www.meetup.com/es-es/aws-sbg-at-universidad-austral/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-58.859075, -34.455733] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "name": "AWS User Group Buenos Aires",
+        "category": "pro",
+        "typeLabel": "Professional User Group",
+        "address": "Buenos Aires Technology District, Buenos Aires City (reference area only)",
+        "description": "A citywide professional AWS community for cloud architects, developers, and DevOps professionals. The map marker highlights the Technology District as a reference area, not the group's actual location.",
+        "link": "https://www.meetup.com/aws-user-group-buenos-aires/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-58.4063, -34.6401] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "name": "National University of La Plata (UNLP)",
+        "category": "sbg",
+        "typeLabel": "Student Builder Group",
+        "address": "Avenida 7 776, B1900TGC La Plata, Buenos Aires Province",
+        "description": "A student cloud computing community at the National University of La Plata.",
+        "link": "https://www.meetup.com/es-es/aws-sbg-at-national-university-of-la-plata-north-campus/"
+      },
+      "geometry": { "type": "Point", "coordinates": [-57.9511217, -34.9128818] }
+    }
+  ]
+}

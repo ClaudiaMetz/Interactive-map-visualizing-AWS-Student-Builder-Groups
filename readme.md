@@ -17,14 +17,14 @@ The AWS technical ecosystem in Buenos Aires is rapidly expanding, yet informatio
 
 ---
 
-## Architecture & AWS Services
+## Planned Architecture & AWS Services
 
-This project relies on AWS cloud infrastructure and open web standards:
+The project is planned around AWS cloud infrastructure and open web standards:
 
-- **Amazon Location Service:** Serves vector map tiles and basemap styling with low latency via an authenticated API Key.
-- **Amazon S3 / Static Web Hosting:** Stores the frontend assets (`index.html`, `styles.css`, `app.js`) and structured spatial data with zero server maintenance overhead.
+- **Amazon Location Service:** Will serve vector map tiles and basemap styling through an API key.
+- **Amazon S3 / Static Web Hosting:** Will host the frontend assets (`index.html`, `styles.css`, `app.js`) and the spatial dataset (`nodes.geojson`).
 - **MapLibre GL JS:** Open-source WebGL client library that renders custom vector tiles and handles user interactions.
-- **GeoJSON Dataset:** Structured coordinate collection containing verified locations, descriptions, tags, and official community links.
+- **GeoJSON Dataset:** `nodes.geojson` stores the locations, descriptions, categories, and links separately from the map logic in `app.js`.
 
 ---
 
@@ -39,11 +39,12 @@ This project relies on AWS cloud infrastructure and open web standards:
 
 ## Verified Regional Hubs
 
-- **UdelaCiudad (UniCABA):** AWS Student Builder Group at University of the City of Buenos Aires (San Telmo / CABA).
-- **FIUBA (UBA):** AWS Student Builder Group at Faculty of Engineering, University of Buenos Aires (CABA).
-- **UNDAV:** AWS Student Builder Group at Universidad Nacional de Avellaneda (Piñeyro, Avellaneda).
-- **Universidad Austral:** AWS Student Builder Group at Austral University (Pilar Campus).
-- **AWS User Group Buenos Aires:** Regional industry community for engineers, architects, and developers (Parque Patricios Tech District / CABA).
+- **UdelaCiudad (UniCABA):** AWS Student Builder Group at University of the City of Buenos Aires (San Telmo / CABA) ([Meetup](https://www.meetup.com/es-es/aws-sbg-at-university-of-the-city-of-buenos-aires/)).
+- **FIUBA (UBA):** AWS Student Builder Group at Faculty of Engineering, University of Buenos Aires (CABA) ([Meetup](https://www.meetup.com/aws-sbg-at-university-of-buenos-aires-faculty-of-engineering/)).
+- **UNDAV:** AWS Student Builder Group at Universidad Nacional de Avellaneda (Piñeyro, Avellaneda) ([Meetup](https://www.meetup.com/aws-sbg-at-national-university-of-avellaneda/)).
+- **Austral University:** AWS Student Builder Group at Austral University (Pilar Campus) ([Meetup](https://www.meetup.com/es-es/aws-sbg-at-universidad-austral/)).
+- **National University of La Plata (UNLP):** AWS Student Builder Group at the National University of La Plata (La Plata, Buenos Aires Province) ([Meetup](https://www.meetup.com/es-es/aws-sbg-at-national-university-of-la-plata-north-campus/)).
+- **AWS User Group Buenos Aires:** Citywide professional AWS community for engineers, architects, and developers. Its map marker highlights the Technology District in Buenos Aires City as a reference area; it does not represent the group's actual geographic location ([Meetup](https://www.meetup.com/aws-user-group-buenos-aires/)).
 
 ---
 
@@ -51,6 +52,12 @@ This project relies on AWS cloud infrastructure and open web standards:
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/rmba-cloud-map.git](https://github.com/YOUR_USERNAME/rmba-cloud-map.git)
-   cd rmba-cloud-map
+   git clone https://github.com/ClaudiaMetz/Interactive-map-visualizing-AWS-Student-Builder-Groups.git
+   cd Interactive-map-visualizing-AWS-Student-Builder-Groups
    ```
+
+2. **Run a local web server** from the project directory so the app can fetch `nodes.geojson`:
+   ```bash
+   python -m http.server 8000
+   ```
+   Then open `http://localhost:8000` in your browser.
