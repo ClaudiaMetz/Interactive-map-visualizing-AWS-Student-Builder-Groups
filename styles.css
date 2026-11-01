@@ -1,0 +1,150 @@
+:root {
+  --color-page: #0f172a;
+  --color-panel: #1e293b;
+  --color-border: #334155;
+  --color-border-strong: #475569;
+  --color-text: #f8fafc;
+  --color-text-strong: #f1f5f9;
+  --color-text-muted: #94a3b8;
+  --color-text-secondary: #cbd5e1;
+  --color-text-button: #e2e8f0;
+  --color-accent: #38bdf8;
+  --color-accent-contrast: #0f172a;
+  --color-focus: #fbbf24;
+  --color-sbg: #0284c7;
+  --color-professional: #ea580c;
+  --color-on-category: #fff;
+  --shadow-sidebar: rgb(0 0 0 / 30%);
+}
+
+* { box-sizing: border-box; }
+
+html, body { width: 100%; height: 100%; }
+
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--color-page);
+  color: var(--color-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+#sidebar {
+  z-index: 2;
+  display: flex;
+  flex: 0 0 340px;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 0;
+  padding: 24px;
+  background: var(--color-panel);
+  border-right: 1px solid var(--color-border);
+  box-shadow: 2px 0 12px var(--shadow-sidebar);
+}
+
+#sidebar h1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+  color: var(--color-accent);
+  font-size: 1.25rem;
+}
+
+#sidebar header p { color: var(--color-text-muted); font-size: 0.875rem; line-height: 1.4; }
+
+.filter-btn-group { display: flex; gap: 8px; margin-top: 8px; }
+
+.filter-btn {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 6px;
+  background: var(--color-page);
+  color: var(--color-text-button);
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.filter-btn.active, .filter-btn:hover { border-color: var(--color-accent); background: var(--color-accent); color: var(--color-accent-contrast); }
+.filter-btn:focus-visible, .node-card:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 2px; }
+
+#node-list {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 0;
+  margin-top: 10px;
+  padding: 2px 4px 2px 0;
+  overflow-y: auto;
+}
+
+.node-card {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-page);
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.2s;
+}
+
+.node-card:hover { border-color: var(--color-accent); }
+.node-card h2 { margin: 6px 0 4px; color: var(--color-text-strong); font-size: 0.9rem; }
+.node-card p { color: var(--color-text-muted); font-size: 0.75rem; line-height: 1.4; }
+
+.node-tag {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.tag-sbg { background: var(--color-sbg); color: var(--color-on-category); }
+.tag-pro { background: var(--color-professional); color: var(--color-on-category); }
+
+#map { position: relative; flex: 1; min-width: 0; min-height: 0; }
+
+.maplibregl-popup-content {
+  padding: 14px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 8px;
+  background: var(--color-panel);
+  color: var(--color-text);
+  font-size: 0.85rem;
+}
+
+.maplibregl-popup-content h2 { margin: 0 0 6px; color: var(--color-accent); font-size: 1rem; }
+.maplibregl-popup-content p { margin: 0 0 8px; color: var(--color-text-secondary); font-size: 0.8rem; }
+.maplibregl-popup-content a { color: var(--color-accent); font-size: 0.75rem; font-weight: 600; text-decoration: none; }
+.maplibregl-popup-content a:hover { text-decoration: underline; }
+.maplibregl-popup-close-button { color: var(--color-text-muted); }
+
+@media (max-width: 700px) {
+  body { flex-direction: column; }
+
+  #sidebar {
+    flex: 0 0 46%;
+    gap: 10px;
+    padding: 16px;
+    border-right: 0;
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 2px 12px var(--shadow-sidebar);
+  }
+
+  #sidebar h1 { font-size: 1.1rem; }
+  #sidebar header p { font-size: 0.8rem; }
+  .filter-btn-group { margin-top: 4px; }
+  #node-list { margin-top: 2px; }
+  #map { flex: 1 1 54%; width: 100%; }
+}

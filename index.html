@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="description" content="Explore AWS technical communities and university chapters across the Buenos Aires Metropolitan Area." />
+  <title>AMBA Cloud Map | AWS Communities</title>
+  <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+  <script defer src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <aside id="sidebar" aria-labelledby="page-title">
+    <header>
+      <h1 id="page-title">📍 AMBA Cloud Map</h1>
+      <p>Explore AWS technical communities and university chapters across the Buenos Aires Metropolitan Area.</p>
+    </header>
+
+    <nav class="filter-btn-group" aria-label="Filter communities">
+      <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter-btn" type="button" data-filter="sbg" aria-pressed="false">Student Groups</button>
+      <button class="filter-btn" type="button" data-filter="pro" aria-pressed="false">Professional</button>
+    </nav>
+
+    <div id="node-list" aria-label="Communities" aria-live="polite"></div>
+  </aside>
+
+  <main id="map" aria-label="Map of AWS communities in the Buenos Aires Metropolitan Area"></main>
+</body>
+</html>
